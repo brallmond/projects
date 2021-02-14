@@ -74,13 +74,13 @@ if __name__ == "__main__":
   """
   # init conds lists
   xpis = [float(args.xpi), rand.uniform(0, 3.0), 1.0, 1.0,\
-1.0, -1.0, 1.0, 1.0, 1.0, 1.30, 3.00]
+1.0, 0.0, 1.0, 1.0, 1.0, 1.30, 3.00]
   ypis = [float(args.ypi), rand.uniform(0, 3.0), 0.0, 1.0,\
-0.0, 0.0, 0.0, 0.0, 0.0, 0.07, 0.75]
+0.0, -1.0, 0.0, 0.0, -0.5, 0.07, 0.75]
   xvis = [float(args.xvi), rand.uniform(0, 3.0), 0.0, 1.0,\
-0.0, 0.0, 0.0, 0.0, 0.0, 0.54, 0.64]
+0.0, 2.0, 0.0, 0.0, 1.0, 0.54, 0.64]
   yvis = [float(args.yvi), rand.uniform(0, 3.0), 1.0, 1.0,\
-0.5, 2.0, 1.0, 1.0, 1.0, 0.47, 1.68]
+0.5, 0.0, 1.0, 1.0, 0.0, 0.47, 1.68]
   
   #osc props lists
   xmasses = [float(args.xmass), rand.uniform(1.1, 3.0), 1.0,\
@@ -88,9 +88,9 @@ if __name__ == "__main__":
   ymasses = [float(args.ymass), rand.uniform(0.1, 3.0), 1.0,\
 1.0, 1.0, 1.0, 1.0, 1.0, 0.5, 2.20, 1.50]
   xks = [float(args.xk), rand.uniform(0.1, 3.0), 1.0, 1.0,\
-1.0, 4.0, 4.0, 1.0, 8.0, 0.50, 2.72]
+1.0, 1.0, 4.0, 1.0, 2.25, 0.50, 2.72]
   yks = [float(args.yk), rand.uniform(0.1, 3.0), 1.0, 1.0,\
-4.0, 1.0, 9.0, 9.0, 4.5, 2.14, 2.45]
+4.0, 4.0, 9.0, 9.0, 4.0, 2.14, 2.45]
 
   key = 0
   # i should be using case here

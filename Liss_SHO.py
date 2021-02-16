@@ -19,15 +19,15 @@ import matplotlib.animation as anim
 import random as rand
 
 #data yielding func
-def func_gen(xpi, xvi, xw, xw2, ypi, yvi, yw, yw2):
+def func_gen(xpi, xvi, xw, ypi, yvi, yw):
   # time var starting at t = 0
   t = 0
   i = 0
   for i in range(totstep):
     # calc func value at each time step
     # using solution from problem 2 of AD HW 1
-    x = xpi*np.cos(xw*t) + (xvi/xw2)*np.sin(xw*t)
-    y = ypi*np.cos(yw*t) + (yvi/yw2)*np.sin(yw*t)
+    x = xpi*np.cos(xw*t) + (xvi/xw)*np.sin(xw*t)
+    y = ypi*np.cos(yw*t) + (yvi/yw)*np.sin(yw*t)
     t += step
     yield t, x, y
 
@@ -175,7 +175,7 @@ if __name__ == "__main__":
   holder = [line, head]
 
   #anim func
-  ani = anim.FuncAnimation(fig, update, func_gen(xpi, xvi, xw, xw2, ypi, yvi, yw, yw2), blit=True, interval=50, repeat=False)
+  ani = anim.FuncAnimation(fig, update, func_gen(xpi, xvi, xw, ypi, yvi, yw), blit=True, interval=50, repeat=False)
   plt.show()
   print("ICs: (x, y, vx, vy) = ({:0.4f}, {:0.4f}, {:0.4f}, {:0.4f})".format(xpi, ypi, xvi, yvi))
   print("Osc. Props.: xmass = {:0.4f}, ymass = {:0.4f}, xk =  {:0.4f}, yk = {:0.4f}".format(xmass, ymass, xk, yk)) 
